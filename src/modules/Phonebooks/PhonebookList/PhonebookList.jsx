@@ -4,15 +4,19 @@ import styles from './phonebook-list.module.scss';
 
 const PhonebookList = ({ removeContact, contacts }) => {
   const myContacts = contacts.map(({ id, name, number }) => (
-    <li key={id}>
+    <li key={id} className={styles.item}>
       {name}: {number}.
-      <button onClick={() => removeContact(id)} type="button">
+      <button
+        className={styles.btn}
+        onClick={() => removeContact(id)}
+        type="button"
+      >
         Delete
       </button>
     </li>
   ));
 
-  return <ol>{myContacts}</ol>;
+  return <ol className={styles.list}>{myContacts}</ol>;
 };
 
 export default PhonebookList;

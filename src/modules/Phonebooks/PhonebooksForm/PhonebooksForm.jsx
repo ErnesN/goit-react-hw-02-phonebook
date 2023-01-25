@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import inititalState from './initialState';
 
-import styles from '../phonebooks.module.scss';
+import styles from './phonebooks-form.module.scss';
 
 class PhonebooksForm extends Component {
   state = { ...inititalState };
@@ -35,8 +35,9 @@ class PhonebooksForm extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
-          <label>Name</label>
+          <label className={styles.text}>Name</label>
           <input
+            className={styles.input}
             name="name"
             value={name}
             onChange={handleChange}
@@ -44,15 +45,18 @@ class PhonebooksForm extends Component {
           />
         </div>
         <div className={styles.formGroup}>
-          <label>Number</label>
+          <label className={styles.text}>Number</label>
           <input
+            className={styles.input}
             name="number"
             value={number}
             onChange={handleChange}
             placeholder="Enter number"
           />
         </div>
-        <button type="submit">Add contact</button>
+        <button className={styles.btn} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }

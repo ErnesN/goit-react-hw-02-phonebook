@@ -1,18 +1,17 @@
+.phonebook {
+  padding: 15px;
+  text-align: center;
+}
 .wrapper {
-    display: grid;
-    grid-template-columns: 400px 400px;
-    gap: 30px;
-}
+  width: 300px;
 
-.block {
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 15px;
-}
-
-.formGroup {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 15px;
-    margin-bottom: 15px;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 28%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  padding: 15px;
+  border-radius: 10px;
+  color: rgb(75, 5, 105);
 }

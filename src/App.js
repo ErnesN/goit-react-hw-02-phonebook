@@ -1,8 +1,8 @@
 import Phonebooks from './modules/Phonebooks/Phonebooks';
-
+import styles from './modules/Phonebooks/phonebooks.module.scss';
 function App() {
   return (
-    <div className="App">
+    <div className={styles.phonebook}>
       <Phonebooks />
     </div>
   );
